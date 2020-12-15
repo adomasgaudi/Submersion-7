@@ -1,27 +1,39 @@
+//////////////////////////////////////////////////
+// testing box model
+*{outline: dotted thin black;}
+
+// hidden parts 
+.dev{display: none;}
+////////////////////////////////////////////////////
+
+
+// basic bootstrap
 @import './bootscss/bootstrap.scss';
 
-// *{outline: dotted thin black;}
-.dev{display: none;}
-
-
-
+// General startig css
 *{box-sizing: border-box; margin: 0;padding: 0; }
 
+
+
+
+//Extend css from bootstrap
 .navbar{@extend .container;}
 
+
+// main styles containers
+////////////////////////
+body{
+  background: #eee; color: #303030;
+  font-family: sans-serif;  text-align: center;
+}
 section{padding-top: 50px;padding-bottom: 50px; min-height: 500px;}
 
-#app {
-  font-family: sans-serif;
-  text-align: center;
-  color: #303030;
-}
 
-a{ color: inherit; text-decoration: underline; cursor: pointer;
+//elements styles
+/////////////////
+ul{margin-left: 1rem;}
+a{ 
+  color: inherit; text-decoration: underline; cursor: pointer;
   &:hover{text-decoration: underline; color: inherit; }
  }
-
-body{background: #eee;}
-
-ul{margin-left: 1rem;}
 

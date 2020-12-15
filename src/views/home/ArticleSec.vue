@@ -5,7 +5,7 @@
         <h1>{{card.title}}</h1>
         <p>{{card.text}}</p>
       </div> -->
-      <Video :cards="cards"/>
+      <Video @openSignup="openSignup" @openLogin="openLogin" :cards="cards"/>
     </div>
   </section>
 </template>
@@ -18,6 +18,10 @@ export default {
   components: {Video},
   setup(props){
     console.log('articleSec', props.cards)
+  },
+  methods:{
+    openSignup(){this.$emit('openSignup')},
+    openLogin(){this.$emit('openLogin')}
   }
 
 }
