@@ -1,0 +1,64 @@
+{
+
+
+
+
+  "mainCards": [
+    {
+      "id": 1,
+      "title": "Popular videos",
+      "body": "some of the iconic resources that i follow",
+      "img": "...",
+      "article": {
+        "text1": "haha lorem199"
+      }
+
+    },
+    {
+      "id": 2,
+      "title": "Future post",
+      "body": "It's coming, but its still in the future. Going through time, takes a while",
+      "img": "...",
+      "article": {
+        "text1": "haha lorem199"
+      }
+    }
+  ],
+
+
+  "asideLinks": [
+    {
+      "id":1,
+      "text": "MIA",
+      "url": "https://massimmersionapproach.com"
+    },
+    {
+      "id":2,
+      "text": "shit",
+      "url": "https://massimmersionapproach.com"
+    },
+    {
+      "id":3,
+      "text": "bit",
+      "url": "https://massimmersionapproach.com"
+    },
+    {
+      "id":4,
+      "text": "sit",
+      "url": "https://massimmersionapproach.com"
+    },
+    {
+      "id":5,
+      "text": "knit",
+      "url": "https://massimmersionapproach.com"
+    },
+    {
+      "id":6,
+      "text": "dot",
+      "url": "https://massimmersionapproach.com"
+    }
+  ]
+
+
+  
+}

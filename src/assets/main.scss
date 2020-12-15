@@ -1,0 +1,27 @@
+@import './bootscss/bootstrap.scss';
+
+// *{outline: dotted thin black;}
+.dev{display: none;}
+
+
+
+*{box-sizing: border-box; margin: 0;padding: 0; }
+
+.navbar{@extend .container;}
+
+section{padding-top: 50px;padding-bottom: 50px; min-height: 500px;}
+
+#app {
+  font-family: sans-serif;
+  text-align: center;
+  color: #303030;
+}
+
+a{ color: inherit; text-decoration: underline; cursor: pointer;
+  &:hover{text-decoration: underline; color: inherit; }
+ }
+
+body{background: #eee;}
+
+ul{margin-left: 1rem;}
+

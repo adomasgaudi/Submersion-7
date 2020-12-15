@@ -1,18 +1,49 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <Jumbo/>
+    <HomeMenu @openArtc="changeArtcState" :cards="cardsjson" :links="linksjson"/>
+    <ArticleSec :cards="cardsjson" v-if="artcState"/>
+    <Coming/>
   </div>
+
+
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Jumbo from './home/Jumbo.vue'
+import HomeMenu from './home/HomeMenu'
+import ArticleSec from './home/ArticleSec'
+import Coming from './home/Coming'
+
+import { ref } from 'vue'
+import getCards from '../composables/getCards'
+
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+  components: { Jumbo, HomeMenu, ArticleSec, Coming },
+  setup(){
+
+    
+    const {load, cardsjson, linksjson, error} = getCards();
+    load("mainCards", cardsjson)
+    load("asideLinks", linksjson);
+    
+
+    const artcState = ref(false)
+    const changeArtcState = () =>{
+      artcState.value = !artcState.value
+    }
+
+
+
+    return{cardsjson, linksjson, artcState, changeArtcState}
   }
+
+
 }
 </script>
+
+<style lang="scss" scoped>
+ 
+
+</style>
